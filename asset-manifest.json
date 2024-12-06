@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/perceptron/static/css/main.47729e89.css",
+    "main.js": "/perceptron/static/js/main.9f398994.js",
+    "static/media/primeicons.svg": "/perceptron/static/media/primeicons.6ed59f962963a4a73af2.svg",
+    "static/media/primeicons.eot": "/perceptron/static/media/primeicons.ff0c4cd79b2ffca2de54.eot",
+    "static/media/primeicons.woff": "/perceptron/static/media/primeicons.8931fda1930c3bd21e96.woff",
+    "static/media/primeicons.ttf": "/perceptron/static/media/primeicons.a5c2a53d1ff7a9ff5933.ttf",
+    "static/media/primeicons.woff2": "/perceptron/static/media/primeicons.024b32cc7bf399b1a847.woff2",
+    "index.html": "/perceptron/index.html",
+    "main.47729e89.css.map": "/perceptron/static/css/main.47729e89.css.map",
+    "main.9f398994.js.map": "/perceptron/static/js/main.9f398994.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.47729e89.css",
+    "static/js/main.9f398994.js"
+  ]
+}
