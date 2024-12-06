@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hide the spinner arrows in Chrome, Safari, and Edge */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.gridContainerWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0.5rem;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "form chart chart"
+        "list chart chart"
+        "list details details"
+    ;
+    gap: 1.5rem;
+    width: 100%;
+    max-height: 100%;
+    overflow-y: hidden;
+}
+
+.formContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    grid-area: form;
+    padding: 0.5rem;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.inputsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.input{
+    width: 48%;
+    padding: 0.8em;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+}
+
+.selectClass{
+    width: 100%;
+    padding: 0.8em;
+    height: 2.5rem;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    cursor: pointer;
+    color: black;
+    font-size: small;
+}
+
+.addButton{
+    width: 100%;
+    padding: 0.8em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+}
+
+.emptyListContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    grid-area: list;
+    height: 32rem;
+}
+
+.listContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    grid-area: list;
+    padding: 0.5rem;
+    margin: 0;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    overflow-y: scroll;
+    font-size: small;
+    height: 32rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.listItem{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0.8em;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+}
+
+.listItem span{
+    width: 20%;
+    background-color: transparent;
+}
+
+.deleteButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.listContainer::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+.listContainer::-webkit-scrollbar-track {
+    background: none;
+}
+
+.listContainer::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 12px;
+}
+
+.listContainer::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.chartContainer{
+    padding: 0.5rem;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    grid-area: chart;
+}
+
+.updateButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 8rem;
+    padding: 0.8em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: lightgreen;
+    color: white;
+    font-weight: 600;
+}
+
+.updateButton:hover {
+    background-color: rgb(97, 191, 97);
+}
+
+.updateButton:disabled {
+    background-color: #d3d3d3;
+    color: #a9a9a9;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.chart{
+    padding: 0.5rem;
+    border-radius: 6px;
+}
+
+.detailsContainer{
+    padding: 0.5rem;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: white;
+    grid-area: details;
+}
+
+.detailsContainer h1{
+    margin: 0;
+    background-color: transparent;
+}
+
+.detailsContainer ul,
+.detailsContainer li{
+    background-color: transparent;
+}
+
+@media screen and (max-width: 1440px){
+    .gridContainer{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "form list"
+            "details list"
+            "chart chart"
+        ;
+        overflow-y: auto;
+    }
+    .listContainer, .emptyListContainer {
+        height: 18rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .gridContainer{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "form"
+            "list"
+            "chart"
+            "details"
+        ;
+        overflow-y: auto;
+    }
+
+    .listContainer, .emptyListContainer{
+        height: 14rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .gridContainer{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "form"
+            "list"
+            "chart"
+            "details"
+        ;
+        overflow-y: auto;
+    }
+
+    .listContainer, .emptyListContainer{
+        height: 14rem;
+    }
+}
